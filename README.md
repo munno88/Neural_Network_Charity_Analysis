@@ -58,13 +58,15 @@ After the data was preprocessed, we used the following parameters to **compile, 
     * Both the first and second hidden layers were activated using RELU - Rectified Linear Unit function. The output layer was activated using the Sigmoid function.
 * The target performance for the accuracy rate is greater than 75%. The model that was created only achieved an accuracy rate of 72.59%
 
-![ORIGINAL](https://user-images.githubusercontent.com/103727169/195521451-aa512ade-0efa-4d08-8627-6821c3d8c721.png)
+![ORIGINAL](https://user-images.githubusercontent.com/103727169/195684155-255727c8-6a7d-49eb-80c6-42ce93dcd130.png)
+
 
 ### Attempts to Optimize and Improve the Accuracy Rate
 
 Three additional attempts were made to increase the model's performance by changing features, adding/subtracting neurons and epochs. The results did not show any improvement.
 
-![CHART](https://user-images.githubusercontent.com/103727169/195525807-4219e8f5-f00c-443f-8e76-474d05bb97bf.png)
+
+![CHART](https://user-images.githubusercontent.com/103727169/195684265-ce157c0f-446e-476e-b351-3164baf5c310.png)
 
 
 
