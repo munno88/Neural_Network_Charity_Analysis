@@ -56,7 +56,7 @@ After the data was preprocessed, we used the following parameters to **compile, 
     * The second hidden layer had 80 inputs (number of neurons from first hidden layer), 30 neurons and 30 bias terms.
     * The output layer had 30 inputs (number of neurons from the second hidden layer), 1 neuron, and 1 bias term.
     * Both the first and second hidden layers were activated using RELU - Rectified Linear Unit function. The output layer was activated using the Sigmoid function.
-* The target performance for the accuracy rate is greater than 75%. The model that was created only achieved an accuracy rate of 72.45%
+* The target performance for the accuracy rate is greater than 75%. The model that was created only achieved an accuracy rate of 72.59%
 
 ![ORIGINAL](https://user-images.githubusercontent.com/103727169/195521451-aa512ade-0efa-4d08-8627-6821c3d8c721.png)
 
@@ -73,8 +73,8 @@ Three additional attempts were made to increase the model's performance by chang
 
   * Binned INCOME_AMT column
   * Created 5,821 total parameters, an decrease of 160 from the original of 5,981
-  * Accuracy increase 0.14% from 72.45% to 72.59%
-  * Loss was reduced by 0.43% from 57.72% to 57.29%
+  * Accuracy decrease 0.08% from 72.59% to 72.51%
+  * Loss was increased by 0.13% from 56.94% to 57.07%
   
 * **Optimization Attempt #2**:
 
@@ -83,8 +83,8 @@ Three additional attempts were made to increase the model's performance by chang
    * Removed SPECIAL_CONSIDERATIONS_Y column from features as it is redundant to SPECIAL_CONSIDERATIONS_N
    * Increased neurons to 100 for the first hidden layer and 50 for the second hidden layer
    * Created 8,801 total parameters, an increase of 2,820 from the original of 5,981
-   * Accuracy decreased 0.15% from 72.45% to 72.3%
-   * Loss increased by 1.45% from 57.72% to 59.17%
+   * Accuracy decreased 0.29% from 72.59% to 72.30%
+   * Loss increased by 2.18% from 56.94% to 59.12%
 
 * **Optimization Attempt #3**:
 
@@ -92,8 +92,8 @@ Three additional attempts were made to increase the model's performance by chang
    * Removed SPECIAL_CONSIDERATIONS_Y column from features as it is redundant to SPECIAL_CONSIDERATIONS_N
    * Increased neurons to 125 for the first hidden layer and 50 for the second hidden layer
    * Created 11,101 total parameters, an increase of 5,120 from the original of 5,981
-   * Accuracy increased 0.05% from 72.45% to 72.5%
-   * Loss increased by 0.12% from 57.72% to 57.84%
+   * Accuracy decreased 0.07% from 72.59% to 72.52%
+   * Loss increased by 0.9% from 56.94% to 57.84%
 
 ## Summary
 
