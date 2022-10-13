@@ -2,6 +2,9 @@
 
 An exercise in Neural Networks and Deep Learning Models using TensorFlow and Pandas libraries in Python to preprocess datasets and create a predictive binary classifier.
 
+![1_N8UXaiUKWurFLdmEhEHiWg](https://user-images.githubusercontent.com/103727169/195529145-b6b9dc5d-1bd1-48b8-9afa-de6ae324e424.jpeg)
+
+
 ## Overview
 
 The purpose of this analysis was to explore and implement neural networks using TensorFlow in Python. Neural networks is an advanced form of Machine Learning that can recognize patterns and features in the dataset. Neural networks are modeled after the human brain and contain layers of neurons that can perform individual computations. A great example of a Deep Learning Neural Network would be image recognition. The neural network will compute, connect, weigh and return an encoded categorical result to identify if the image represents a "dog" or a "cat" or as shown in the image below, George Washington.
@@ -61,14 +64,51 @@ After the data was preprocessed, we used the following parameters to **compile, 
 
 Three additional attempts were made to increase the model's performance by changing features, adding/subtracting neurons and epochs. The results did not show any improvement.
 
-![CHART](https://user-images.githubusercontent.com/103727169/195521789-4d5f8368-1a7b-41c4-9096-58f308c53acf.png)
+![CHART](https://user-images.githubusercontent.com/103727169/195525807-4219e8f5-f00c-443f-8e76-474d05bb97bf.png)
+
+
 
 
 * **Optimization Attempt #1**:
+
   * Binned INCOME_AMT column
   * Created 5,821 total parameters, an decrease of 160 from the original of 5,981
-  * Accuracy increase 0.001% from 72.45% to 72.5%
-  * Loss was reduced by 2.10% from 58.08% to 56.86%
+  * Accuracy increase 0.14% from 72.45% to 72.59%
+  * Loss was reduced by 0.43% from 57.72% to 57.29%
+  
+* **Optimization Attempt #2**:
+
+   * Removed ORGANIZATION column
+   * Binned INCOME_AMT column
+   * Removed SPECIAL_CONSIDERATIONS_Y column from features as it is redundant to SPECIAL_CONSIDERATIONS_N
+   * Increased neurons to 100 for the first hidden layer and 50 for the second hidden layer
+   * Created 8,801 total parameters, an increase of 2,820 from the original of 5,981
+   * Accuracy decreased 0.15% from 72.45% to 72.3%
+   * Loss increased by 1.45% from 57.72% to 59.17%
+
+* **Optimization Attempt #3**:
+
+   * Binned INCOME_AMT and AFFILIATION column
+   * Removed SPECIAL_CONSIDERATIONS_Y column from features as it is redundant to SPECIAL_CONSIDERATIONS_N
+   * Increased neurons to 125 for the first hidden layer and 50 for the second hidden layer
+   * Created 11,101 total parameters, an increase of 5,120 from the original of 5,981
+   * Accuracy increased 0.05% from 72.45% to 72.5%
+   * Loss increased by 0.12% from 57.72% to 57.84%
+
+## Summary
+
+In summary, our model and various optimizations did not help to achieve the desired result of greater than 75%. With the variations of increasing the epochs, removing variables, adding a 3rd hidden layer (done offline in Optimization attempt #4) and/or increasing/decreasing the neurons, the changes were minimal and did not improve above 19 basis points. In reviewing other Machine Learning algorithms, the results did not prove to be any better. For example, Random Forest Classifier had a predictive accuracy rate of 70.80% which is a 2.11% decrease from the accuracy rate of the Deep Learning Neural Network model (72.33%).
+
+Overall, Neural Networks are very intricate and would require experience through trial and error or many iterations to identify the perfect configuration to work with this dataset.
+
+## Resources
+
+* Software: Python 3.7.9, Anaconda 4.9.2 and Jupyter Notebooks 6.1.4
+* Libraries: Scikit-learn, Pandas, TensorFlow, Keras
+
+
+
+
 
 
 
